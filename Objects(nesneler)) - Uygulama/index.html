@@ -11,85 +11,37 @@
     <body>
         <script src="script.js" type="text/javascript"></script>
         <script>
-        	
-			/*
-				#1: Şu personel bilgilerini object içinde saklanması
-				
-					ad: Ali
-					soyad: Yılmaz
-					cinsiyet: erkek
-					telefon: 0235 656 56 56
-					adres: izmit Kocaeli
-					meslek: bilgisayar mühendisi
-					diller: ingilizce, almanca
-					hobiler: sinema, spor, anime izleme
-					
-				#2 Bu personel kaç dil biliyor?
-				#3 Bu personelin hobilerini alt alta yazdırın
-				#4 3 elemanlı bir personel bilgi listesini oluşturunuz
-				
-			*/
-			/*	
-			var ali = {
-				
-				ad : 'Sevgi',
-				soyad: 'Yılmaz',
-				cinsiyet: 'Erkek',
-				telefon: '0235 656 56 56',
-				adres: 'izmit Kocaeli',
-				meslek: 'bilgisayar mühendisi',
-				diller: ['ingilizce', 'almanca'],
-				hobiler: ['sinema', 'spor', 'manga okumak', 'anime izlemek']
-			};
+        	var marka = ["Opel", "BMv","Toyota", "Mazda", "Lotus", "Renault"];
+			var model = new Array("Corsa", "Yaris", "Clio");
 			
-			console.log(ali.hobiler);
+			console.log(marka[2]);
+			console.log(model[2]);
 			
-	
-			//tek tek yazdırmak için;
-			//ali.hobiler.forEach(function(hobi){console.log(hobi);});
+			model[0]="Astra";
+			console.log(model);
 			
-			*/
+			var auris = ["Toyota", "auris", 46, true];
 			
-			var personel = [
-				{
-					ad : 'Sevgi',
-					soyad: 'Yılmaz',
-					cinsiyet: 'Kadın',
-					telefon: '0235 656 56 56',
-					adres: 'izmit Kocaeli',
-					meslek: 'bilgisayar mühendisi',
-					diller: ['ingilizce', 'almanca'],
-					hobiler: ['sinema', 'spor', 'manga okumak', 'anime izlemek']
-				},
-				{
-					ad : 'Gizem',
-					soyad: 'Gesgin',
-					cinsiyet: 'Kadın',
-					telefon: '0235 656 56 56',
-					adres: 'Ankara',
-					meslek: 'Jeoloji mühendisi',
-					diller: ['ingilizce', 'almanca'],
-					hobiler: ['sinema', 'spor', 'manga okumak', 'anime izlemek']
-				},
-				{
-					ad : 'Sevo',
-					soyad: 'asdas',
-					cinsiyet: 'Kadın',
-					telefon: '0235 656 56 56',
-					adres: 'Ankara',
-					meslek: 'Mimar',
-					diller:['İspanyolca', 'İngilizce'],
-					hobiler: ['fitness', 'spor', 'yoga', 'yüzmek']
-				}
-			];
+			auris.push('blue');
+			auris.unshift('HB');
+			//diznin sonundaki elemanı götüren pop, en başındakini götürenshift
+			//auris.pop();
+			//auris.shift();
 			
-			personel.forEach(function(personel){
-				console.log(personel.ad+ ' '+personel.soyad);
-				
-				personel.diller.forEach(function(dil){
-					console.log(dil);
-				});
-			})
+			console.log(auris);
+			
+			
+			for(var i=0; i<marka.length; i++){
+				console.log(marka[i]);
+			}
+			
+			if(marka.indexOf('Mercedes')!==-1){
+				console.log(marka[marka.indexOf('Mazda')]);
+				//veya 
+				console.log("bulundu");
+			}else{
+				console.log("Aranan Kelmie bulunamadı")
+			}
 			
 			
         </script>
