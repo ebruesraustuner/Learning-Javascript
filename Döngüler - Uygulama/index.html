@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <title>Koşul İfadeleri</title>
+    
+    <meta name="description" content="Javscript Sitesi">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="Ebru Esra">
+</head>
+    <body>
+        <script src="script.js" type="text/javascript"></script>
+        //10-100 arasındaki sayıları yazdırın(for)
+		//10-100 arasındaki sayıları 5 er 5 er yazdırın (while)
+		//login kontrolü k.adı ve parola 
+		var k_username = "guest" ;
+		var k_password = "12345" ;
+		
+		<script>
+		
+			/*
+			for (var i=10; i<=100; i++){
+				console.log(i);
+			}
+			*/
+			
+			/*
+			var i=10;
+			while(i<=100){
+				console.log(i);
+				i = i + 5;
+			}
+			*/
+			var k_username = "admin" ;
+			var k_password = "12345" ;
+			var logged = false;
+			
+			while(!logged){
+				var username = prompt("Kullanıcı Adınızı giriniz : ");
+				var password = prompt("Parolanızı Giriniz : "); 
+			
+				if ((k_username == username) && (k_password == password)) {
+					console.log("Giriş Yapıldı");
+					logged = true;
+
+				}
+				else{
+					console.log("Kullanıcı adını veya parolayı hatalı girdiniz")
+				}
+			}
+			
+			
+			
+		</script>
+		
+    </body>
+</html>
