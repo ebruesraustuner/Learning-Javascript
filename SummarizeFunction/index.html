@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <title>Koşul İfadeleri</title>
+    
+    <meta name="description" content="Javscript Öğreniyoruz">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="Ebru Esra">
+</head>
+    <body>
+        <script>
+			/* 
+			Cümlenin belli kısmını göstermek, kelime bölünmeyecek
+			*/
+			
+			var product = {
+				name: 'Samsung S8',
+				price: 3000,
+				description : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque laoreet, quam eget pellentesque tristique, turpis erat ullamcorper sem, sed posuere elit elit a eros. Praesent dui magna, malesuada non sodales id, pharetra ac purus. Donec eget suscipit nulla. Mauris maximus nunc non commodo accumsan. Nam sed eros placerat, sollicitudin ante sit amet, sagittis risus.',
+				summary: function(){
+					var ozetcumle = [];
+					var maxKarakter = 20;
+					var cumle = this.description;
+
+					if(maxKarakter>cumle.length){
+						this.shortDescription = cumle;
+					}else{
+						var kelimeler = cumle.split(' ');
+
+						var toplamKarakter = 0;
+
+						for(var i=0;i<kelimeler.length;i++){
+							ozetcumle.unshift(kelimeler[i]);
+							toplamKarakter+=kelimeler[i].length;
+
+							if(toplamKarakter>maxKarakter){
+								break;
+							}
+						}
+					}
+					
+					this.shortDescription = ozetcumle.join(' ')+'...';
+					
+				}
+			};
+			
+			product.summary();
+			console.log(product);
+			
+			/*function ozet(cumle,maxKarakter){
+					var ozetcumle = [];
+
+				if(maxKarakter>cumle.length){
+					return cumle;
+				}else{
+					var kelimeler = cumle.split(' ');
+
+					var toplamKarakter = 0;
+
+					for(var i=0;i<kelimeler.length;i++){
+						ozetcumle.unshift(kelimeler[i]);
+						toplamKarakter+=kelimeler[i].length;
+
+						if(toplamKarakter>maxKarakter){
+							break;
+						}
+					}
+				}
+				return ozetcumle.join(' ')+'...'
+				
+			}
+			*/
+			//console.log(ozet(cumle,20));
+        </script>
+		
+			
+    </body>
+</html>
