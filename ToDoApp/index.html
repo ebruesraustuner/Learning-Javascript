@@ -1,0 +1,46 @@
+<!DOCTYPE Html>
+<html lang = "en">
+
+<head> 
+	<meta charset="UTF-8">
+	<title>Javascript - To Do APP</title>
+    <meta name="description" content="Javascript-Dom">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="Ebru Esra">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="style.css">
+	
+</head>
+<body>	
+	
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-lg-6 col-md-8 mt-5">
+				<div class="card">
+					<div class="card-body">
+						<div class="input-group">
+						<input type="text" id="txtItem" class="form-control" title="title">
+							<div class="input-group-append">
+								<button class="btn btn-outline-secondary" type="button" id="btnCreate">ADD</button>
+							</div>	
+						</div>
+					</div>
+				</div>
+				
+				<div class="card mt-3">
+					<div class="card-header">My To Do List <button id="deleteAll" class="btn btn-danger btn sm d-none">Delete All </button> </div>
+					<ul id="myList" class="list-group list-group-flush">
+						
+					</ul>
+				
+				</div>
+			
+			</div>	 
+		</div>
+	</div>
+	
+	
+<script src="script.js"></script>	
+</body>
+</html>
+
